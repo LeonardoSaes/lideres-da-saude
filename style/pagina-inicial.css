@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: 'Avenir', sans-serif;
+    src: url(../fonts/Avenir_Medium.ttf) format('ttf');
+}
+
+:root{
+    --color-1:#25434e;
+    --color-2:#608294;
+    --color-3:#e0b183;
+    --color-4:#fdfdfc;
+    --color-5:#e9e9e9;
+}
+
+html{
+    background-color: var(--color-5);
+    scroll-behavior: smooth;
+}
+
+/* CABEÇALHO */
+
+.nav-mobile{
+    display: none;
+}
+.nav{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    height: 80px;
+    align-items: center;
+    margin: 0 auto;
+}
+.menu-logo-icone-abrir{
+    display: none;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+.titulos{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.titulos a:hover{
+    color: var(--color-3);
+    text-decoration: underline;
+}
+
+a{
+    font-family: "Avenir", sans-serif;
+    font-weight:500;
+    text-decoration: none;
+    color: var(--color-4);
+    padding: 10px;
+    list-style-type: none;
+}
+.espacamento-titulos-botao{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button button{
+    background-color: var(--color-3);
+    color: var(--color-4);
+    font-family: 'Avenir',sans-serif;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight:500;
+    margin-right: 30px;
+    transition: all .5s;
+}
+.button button:hover{
+    transform: scale(1.1);
+    
+}
+
+
+/* CABEÇALHO MOBILE */
+.menu-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-1);
+    width: 100%;
+}
+.menu-mobile .imagem-logo{
+    width: 100px;
+    height: 100px;
+}
+.menu-logo-icone-abrir{
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+
+/* SEÇÃO IMERSÃO */
+.imersao{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    background-image: url("../img/fundo-transparente2-maior.png");
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.section-left-imersao{
+    width: 50%;
+    padding: 30px;
+    object-fit: cover;
+   
+}
+.titulo-imersao h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 24px;
+    color: var(--color-4);
+    margin-top: 20px;
+}
+
+.titulo-imersao .traco{
+    width: 200px;
+    margin-top: 8px;
+    margin-bottom: 140px;
+}
+.data-imersao u{
+    color: var(--color-3);
+}
+.loc-imersao{
+    display: flex;   
+}
+.loc-imersao a{
+    color: var(--color-3);
+}
+.loc-imersao a:hover{
+    text-decoration: underline;
+}
+.botoes-imersao{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.botoes-imersao button{
+    background-color: var(--color-3);
+    color: var(--color-4);
+    font-family: 'Avenir',sans-serif;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight:500;
+    margin-right: 30px;
+    transition: all .5s;
+}
+.botoes-imersao button:hover{
+    transform: scale(1.1);
+    
+}
+.section-right-imersao{
+    width: 50%;
+}
+
+.section-right-imersao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SEÇÃO EVENTO */  
+.evento{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.section-left-evento{
+    width: 50%;
+    padding: 30px;
+}
+
+.section-right-evento{
+    width: 50%;  
+}
+.section-right-evento video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titulo-evento{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-evento h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 3px;
+    color: var(--color-4);
+
+}
+
+/* SEÇÃO PALESTRANTES */
+.palestrantes{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    background-image: url(../img/fundo-transparente2-maior.png);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titulo-palestrantes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-palestrantes h2{
+    font-family: 'Avenir', sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 3px;
+    color: var(--color-4);
+}
+.container-palestrantes{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+.container-palestrantes .swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.container-palestrantes .swiper .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-palestrantes .swiper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SEÇÃO REVISTA */
+.revista{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    margin: 0 auto;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.titulo-revista h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 25px;
+    color: var(--color-4);
+    margin-top: 30px;
+}
+.titulo-revista .traco{
+    width: 250px;
+}
+.container-revista{
+    display: flex;
+}
+
+.section-left-revista{
+    width: 50%;
+    padding: 30px;
+}
+.link-revistas{
+    color: var(--color-3);
+    padding: 0;
+}
+.link-revistas:hover{
+    text-decoration: underline;
+}
+
+.section-right-revista{
+    width: 50%;
+    padding: 30px;
+   
+}
+.section-right-revista img{
+    max-width: 300px;
+}
+.titulo-revista .traco{
+    width: 230px;
+}
+
+/* SEÇÃO PRIMEIRA IMERSAO */
+.primeira-imersao{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    background-image: url("../img/fundo-transparente2-maior.png");
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.titulo-primeira-imersao h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 24px;
+    color: var(--color-4);
+    margin-top: 30px;
+}
+.titulo-primeira-imersao .traco{
+    width: 300px;
+}
+
+.container-primeira-imersao{
+    display: flex;
+}
+.traco-vertical{
+    background-color: var(--color-3);
+    width: 1px;
+    height: 600px;
+}
+
+.section-left-primeira-imersao{
+    width: 50%;
+    padding: 30px;
+}
+.section-left-primeira-imersao ul > li{
+    color: var(--color-4);
+    font-family: 'poppins', sans-serif;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.section-right-primeira-imersao{
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-right-primeira-imersao .swiper {
+    width: 100%;
+    height: 400px;
+} 
+.section-right-primeira-imersao .swiper .swiper-slide{
+    background-position: center;
+    background-size: cover;
+}
+.section-right-primeira-imersao .swiper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   
+}
+.swiper-button-next{
+    color: var(--color-3);
+}
+
+.swiper-button-prev{
+    color: var(--color-3);
+}
+
+
+/* SEÇÃO INSCRIÇÃO */
+.inscricao{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    margin: 0 auto;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.titulo-inscricao h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 25px;
+    color: var(--color-4);
+    margin-top: 30px;
+}
+.titulo-inscricao .traco{
+    width: 175px;
+}
+.container-inscricao{
+    display: flex;
+}
+.section-left-inscricao{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.form-inscricao{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-family: 'poppins';
+    color: var(--color-4);
+}
+input{
+    outline: none;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 7px;
+}
+input:focus{
+    outline: 2px solid var(--color-3);
+}
+
+
+form button{
+    width: 100%;
+    background-color: var(--color-3);
+    color: var(--color-4);
+    font-family: 'Avenir',sans-serif;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight:500;
+    transition: all .5s;
+    margin-top: 11px;
+}
+form button:hover{
+    transform: scale(1.1);
+}
+
+.section-right-inscricao{
+    width: 50%;
+}
+.section-right-inscricao img{
+    width: 100%;
+    height: 100%;
+}
+
+/* SEÇÃO SEJA PATROCINADOR */
+.seja-patrocinador{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    background-image: url("../img/fundo-transparente2-maior.png");
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.titulo-seja-patrocinador h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 25px;
+    color: var(--color-4);
+    margin-top: 30px;
+
+}
+.titulo-seja-patrocinador .traco{
+    width: 195px;
+}
+.container-seja-patrocinador{
+    padding: 30px;
+}
+.form-seja-patrocinador{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* SEÇÃO ASSISTA */
+.assista{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    margin: 0 auto;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.titulo-assista h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 25px;
+    color: var(--color-4);
+    margin-top: 30px;
+}
+.titulo-assista .traco{
+    width: 300px;
+}
+.container-assista{
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+/* SEÇÃO FOOTER */
+
+footer{
+    display: flex;
+    max-width: 1500px;
+    height: 80px;
+    background-color: var(--color-1);
+    background-image: url(../img/fundo-transparente2-maior.png);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5px;
+    justify-content: space-around;
+}
+footer a{
+    padding: 0;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.redes-sociais img{
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.copyright p{
+    margin: 0;
+}
+
+.nome-criadores {
+    color: var(--color-3);
+}
+.nome-criadores:hover{
+    text-decoration: underline;
+}
+
+
+.traco{
+    display: flex;
+    width: 145px;
+    height: 2px;
+    background-color: var(--color-3);
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+p{
+    color: var(--color-4);
+    font-family: "poppins";
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input{
+    font-family: 'poppins', sans-serif;
+    font-family: 12px; 
+    padding: 10px;
+    color: var(--color-1);
+}
+
+
+
+@media screen and (max-width: 950px){
+    
+    /* CABEÇALHO MOBILE */
+    .menu-logo-icone-abrir{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+        width: 100%;
+    }
+    .menu-logo-fechar{
+        width: 0;
+        height: 100%;
+        background-color: var(--color-1);
+        z-index: 9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+        transition: all 0.5s;
+        display: flex;
+        justify-content: center;
+
+    }
+    .titulos-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 24px;
+    }
+    .titulos-mobile a:hover, .titulos-mobile:focus{
+        text-decoration: underline;
+    }
+    .menu-logo-icone-fechar{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 6%;
+        right: 3%;
+    }
+    /* SEÇÃO IMERSÃO */
+    .imersao{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-left-imersao{
+        width: 100%;
+    }
+    .section-right-imersao{
+        display: none;
+    }
+    /* SEÇÃO EVENTO */
+    .evento{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-left-evento{
+        width: 100%;
+    }
+    .section-right-evento{
+        width: 100%;
+    }
+    .section-right-evento video{
+        height: 100%;
+        width: 100%;
+    }
+    /* SEÇÃO REVISTAS */
+    .container-revista{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-left-revista{
+        width: 100%;
+    }
+    .section-right-revista{
+        display: none;
+    }
+    /* SEÇÃO PRIMEIRA IMERSÃO */
+    .container-primeira-imersao{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-left-primeira-imersao{
+        width: 100%;
+    }
+    .section-right-primeira-imersao{
+        width: 100%;
+    }
+    .traco-vertical{
+        display: none;
+    }
+    /* SEÇÃO INSCRIÇÃO */
+    .container-inscricao{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-left-inscricao{
+        width: 100%;
+    }
+    .section-right-inscricao{
+        display: none;
+    }
+    /* SEÇÃO ASSISTA */
+    .container-assista{
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    .container-assista iframe{
+        width: 350px;
+        height: 200px;
+    } 
+    /* SEÇÃO FOOTER */
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        
+    }
+    footer p{
+        font-size: 12px;
+    }
+    footer a{
+        padding: 0px;
+    }
+    .nome-criadores{
+        margin: 7px 0px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .form-inscricao{
+        width: 100%;
+    }
+    .form-seja-patrocinador{
+        width: 100%;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:500px){
+    
+    /* SEÇÃO IMERSÃO */
+    .section-left-imersao .titulo-imersao h2{
+        font-size: 20px;
+    }
+    .section-left-imersao .titulo-imersao .traco{
+        margin-bottom: 100px;
+    }
+    .cor-data-e-loc a {
+        font-size: 14px;
+    }
+    
+    /* SEÇÃO EVENTO */
+    .titulo-evento .div-titulo h2{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .titulo-evento .traco{
+        width: 90px;
+    }
+
+    /* SEÇÃO PALESTRANTES */
+    .titulo-palestrantes h2{
+        font-size: 20px;
+    }
+    .titulo-palestrantes .traco{
+        width: 105px;
+        margin-bottom: 50px;
+    }
+
+    /* SEÇÃO REVISTA */
+    .titulo-revista h2{
+        font-size: 20px;
+    }
+    .titulo-revista .traco{
+        margin-bottom: 35px;
+    }
+
+    /* SEÇÃO PRIMEIRA IMERSÃO */
+    .titulo-primeira-imersao h2{
+        font-size: 20px;
+    }
+    .section-left-primeira-imersao li{
+        font-size: 14px;
+    }
+
+    /* SEÇÃO INSCRIÇÃO */
+    .titulo-inscricao h2{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .titulo-inscricao .traco{
+        margin-bottom: 50px;
+    }
+    .form-inscricao label{
+        font-size: 14px;
+    }
+
+    /* SEÇÃO SEJA PATROCINADOR */
+    .titulo-seja-patrocinador h2{
+        font-size: 20px;
+    }
+    .titulo-seja-patrocinador .traco{
+        margin-bottom: 30px;
+    }
+    .container-seja-patrocinador p{
+        margin-bottom: 30px;
+    }
+    .form-seja-patrocinador label{
+        font-size: 14px;
+    }
+
+    /* SEÇÃO ASSISTA */
+    .titulo-assista h2{
+        font-size: 20px;
+    }
+    .titulo-assista .traco{
+        margin-bottom: 50px;
+        width: 230px;
+    }
+}
