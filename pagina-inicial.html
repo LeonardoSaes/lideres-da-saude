@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Líderes da Saúde</title>
+    <link rel="shortcut icon" type="image/png" href="img/logotipo.png"/>
+    
+    <!-- ESTILIZAÇÕES -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/pagina-inicial.css">
+    
+    
+</head>
+<body>
+    
+    <header>
+        <!-- CABEÇALHO TELAS-->
+        <nav class="nav">
+            <div class="logo">
+                <img src="img/logotipo.png" alt="Logo Líderes da saúde">
+            </div>
+            <div class="espacamento-titulos-botao">
+                <div class="titulos" id="titulos">
+                    <a href="#evento" >Evento</a>
+                    <a href="#palestrantes" >Palestrantes</a>
+                    <a href="#revista" >Revista</a>
+                    <a href="#primeira-imersao" >Primeira imersão</a>
+                    <a href="#seja-patrocinador" >Seja um patrocinador</a>
+                    <a href="#assista" >Assista</a>
+                </div>
+                <div class="button">
+                    <button><a href="#inscricao">Participe</a></button>
+                </div>
+            </div>
+        </nav>
+        <!-- CABEÇALHO MOBILE -->
+        <nav class="nav-mobile">
+            
+            <div class="menu-logo-fechar" id="menu-logo-fechar">
+                <button class="menu-logo-icone-fechar" onclick="closeMenu()">
+                    <img src="img/circle-x.svg" alt="Logo fechar menu">
+                </button>
+
+            <div class="titulos-mobile">
+                    <a href="#evento" onclick="closeMenu()">Evento</a>
+                    <a href="#palestrantes" onclick="closeMenu()">Palestrantes</a>
+                    <a href="#revista" onclick="closeMenu()">Revista</a>
+                    <a href="#primeira-imersao" onclick="closeMenu()">Primeira imersão</a>
+                    <a href="#seja-patrocinador" onclick="closeMenu()">Seja um patrocinador</a>
+                    <a href="#assista" onclick="closeMenu()">Assista</a>
+            </div>
+        </div>
+            
+        
+        <div class="menu-mobile">
+            <img src="img/logotipo.png" class="imagem-logo" alt="Logo Líderes da saúde">
+            <img src="img/menu.svg" class="menu-logo-icone-abrir" onclick="openMenu()"alt="Logo do menu">
+        </div>
+    </nav>
+        
+    </header>
+    
+    <!-- SEÇÃO IMERSÃO -->
+        <section class="imersao fade-up"  id="imersao">
+            <div class="section-left-imersao">
+                <div class="titulo-imersao">
+                        <h2>Imersão Líderes da Saúde</h2>
+                        <div class="traco"></div>
+                </div>
+                <div class="loc-e-data-imersao">
+                    <div class="data-imersao">
+                        <p>Data: <u>07/11/2024</u></p>
+                    </div>
+                    <div class="loc-imersao">
+                        <p>Localização: <div class="cor-data-e-loc"><a href="https://www.google.com.br/maps/place/InRad+-+Instituto+de+Radiologia+do+Hospital+das+Cl%C3%ADnicas+FMUSP+-+Portaria+6,+7,+9+e+17/@-23.5565949,-46.6730795,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce582a0998c2ef:0x9920bd041230a96!8m2!3d-23.5565998!4d-46.6705046!16s%2Fg%2F11b6htsw3n?entry=ttu" target="_blank"> InRad HC - São Paulo</a></div></p>
+                    </div>
+                </div>
+                <div class="textos-imersao">
+                    <p>No dia 07 de novembro realizaremos o segundo encontro do Líderes da Saúde.</p>
+                    <p>O evento reunirá lideranças da Saúde para um treinamento íncrivel com uma oportunidade excepcional de networking e negócios.</p>
+                </div>
+                <div class="botoes-imersao">
+                    <button><a href="#inscricao">Faça sua inscrição</a></button>
+                    <button><a href="#seja-patrocinador">Seja um patrocinador</a></button>
+                </div>
+            </div>
+            <div class="section-right-imersao">
+                <img src="img/4Y7A7311.jpg" alt="">
+            </div>
+        </section>
+    
+    <!-- SEÇÃO EVENTO -->
+    <section class="evento" id="evento">
+        <div class="section-left-evento">
+                <div class="titulo-evento">
+                    <div class="div-titulo">
+                        <h2>O evento</h2>
+                        <div class="traco"></div>
+                    </div>
+                    <div class="texto1-evento">
+                        <p>
+                            O evento “Imersão Líderes da Saúde” foi criado com o intuito de reunir diretores, líderes e profissionais da saúde em um só lugar para trocas de experiências e gerar novos contatos (networking).
+                        </p>
+                    </div class="texto2-evento">
+                    <p>
+                        Organizado pela CMSS e Executivos Saúde, somos líderes comprometidos com a promoção da excelência e inovação no setor da saúde, unindo forças para criar uma experiência única para os maiores protagonistas do cenário atual.
+                    </p>
+                </div>
+        </div>
+        <div class="section-right-evento">
+            <video loop autoplay>
+                <source src="video/1920x1080.mp4" type="video/mp4"></source>
+            </video>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PALESTRANTES --> 
+    <section class="palestrantes" id="palestrantes">
+        <div class="titulo-palestrantes">
+            <h2>Palestrantes</h2>
+            <div class="traco"></div>
+    </div>
+    
+    <div class="container-palestrantes">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+            </div>
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+    </div>
+    </section>
+
+
+    <!-- SEÇÃO REVISTA -->
+    <section class="revista" id="revista">
+        <div class="titulo-revista">
+            <h2>Revista Executivos da Saúde</h2>
+            <div class="traco"></div>
+        </div>
+        <div class="container-revista">
+            <div class="section-left-revista">
+                <p>A Líderes da Saúde impulsiona a convergência entre excelência e inovação, proporcionando um networking enriquecedor. A Revista Executivos da Saúde desempenha papel crucial, conectando profissionais e visionários, sendo fonte de informação e descobertas para o crescimento do setor.</p>
+                <a href="https://executivosdasaude.com.br/revistas/" target="_blank" class="link-revistas">Acesse nossas revistas clicando aqui</a>
+            </div>    
+            <div class="section-right-revista">
+              <img src="img/Revista.png" alt="foto da revista chamada Executivos da Saúde">
+              <img src="img/Revista2.png" alt="foto da revista chamada Executivos da Saúde">
+            </div>    
+        </div>
+    </section>
+
+    <!-- SEÇÃO PRIMEIRA IMERSAO -->
+    <section class="primeira-imersao" id="primeira-imersao">
+        <div class="titulo-primeira-imersao">
+            <h2>Primeira Imersão Líderes da Saúde</h2>
+            <div class="traco"></div>
+        </div>
+        <div class="container-primeira-imersao">
+            <div class="section-left-primeira-imersao">
+                <p>
+                    Primeiro Encontro de Líderes ocorreu em novembro de 2023. Uma imersão em líderes da saúde que ofereceu insights valiosos sobre inovações e desafios no setor. Esse é o objetivo da Líderes da Saúde. Integrar talentos!
+                </p>
+                <p>Temas da primeira imersão: </p>
+                <ul>
+                    <li>"Otimização de Recursos: Como Envolver as Equipes" - com Aline Thomaz.</li>
+                    <li>"Como Ser Mais Assertivo na Tomada de Decisão" - com Heder Bragança.</li>
+                    <li>"O Papel da Liderança na Gestão Médica" - com André Chiga.</li>
+                    <li>"Quais as Habilidades Necessárias para um Gestor Eficaz" - com Dr. Izaias de Sá.</li>
+                    <li>"Ser Chefe ou Líder?" - com Dr Alfonso Nomura.</li>
+                    <li>"Métricas e Processos para Alcançar Excelência Profissional" - com Anis Gathás.</li>
+                    <li>"Como Utilizar Tecnologias e Processos a Favor da Minha Equipe" - com Laércio Neves.</li>
+                </ul>
+            </div>    
+            <div class="section-meio-primeira-imersao">
+                <div class="traco-vertical"></div>
+            </div>
+            <div class="section-right-primeira-imersao">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img/fundo-feed1.jpg" alt=""></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  
+                  </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO INSCRIÇÃO -->
+    <section class="inscricao" id="inscricao">
+        <div class="container-inscricao">
+            <div class="section-left-inscricao">
+                <div class="titulo-inscricao">
+                    <h2>Faça sua inscrição</h2>
+                    <div class="traco"></div>
+                </div>
+                <p>Não deixe passar esta oportunidade única de fazer networking incrível e estar na presença de renomados líderes do setor de saúde.</p>
+                <div class="form-inscricao">
+                    <form action="cadastro-participantes.php" method="post">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" required>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="numero">Número: </label>
+                        <input type="number" required name="numero" id="numero"  placeholder="(11) 99999-9999">
+                        <label for="cpf">CPF:</label>
+                        <input type="number" required name="cpf" id="cpf">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" name="cargo" id="cargo" required>
+                        <button>Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-right-inscricao">
+                <img src="img/4Y7A7137.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SEJA PATROCINADOR -->
+    <section class="seja-patrocinador" id="seja-patrocinador">
+        <div class="titulo-seja-patrocinador">
+            <h2>Seja um patrocinador</h2>
+            <div class="traco"></div>
+        </div>
+        <div class="container-seja-patrocinador">
+            <p>Esta é uma oportunidade imperdível para sua empresa se tornar patrocinadora do evento e apresentar seus produtos ou serviços para mais de 200 líderes na área hospitalar. O evento é um encontro fechado e exclusivo com 200 participantes, incluindo chefes de equipes médicas e diretores hospitalares. Faremos uma transmissão ao vivo do evento no YouTube, com a participação da Revista Executivos da Saúde, proporcionando acesso ao banco de dados da revista e dos participantes do evento.</p>
+            <div class="form-seja-patrocinador">
+                <form action="cadastro-patrocinadores.php" method="post">
+                    <label for="nome-patrocinador">Nome:</label>
+                    <input type="text" name="nome-patrocinador" id="nome-patrocinador" required>
+                    <label for="email-patrocinador">Email:</label>
+                    <input type="email" name="email-patrocinador" id="email-patrocinador" required>
+                    <label for="numero-patrocinador">Número: </label>
+                    <input type="number" required name="numero-patrocinador" id="numero-patrocinador" placeholder="(11) 99999-9999">
+                    <label for="cpf-patrocinador">CPF:</label>
+                    <input type="number" required name="cpf-patrocinador" id="cpf-patrocinador">
+                    <label for="cargo-patrocinador">Cargo:</label>
+                    <input type="text" name="cargo-patrocinador" id="cargo-patrocinador" required>
+                    <button>Enviar</button>
+                </form>
+        </div>
+    </section>
+
+    <!-- SEÇÃO ASSISTA -->
+    <section class="assista" id="assista">
+        <div class="titulo-assista">
+            <h2>Assista nossa primeira imersão!</h2>
+            <div class="traco"></div>
+        </div>
+        <div class="container-assista">
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/aQpAuJNvBBY?si=-J--wWTxMRFWZqCV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FOOTER -->
+    <section class="footer">
+        <footer>
+            <div class="redes-sociais">
+                <div class="redes-sociais-icons">
+                    <a href="https://www.instagram.com/cmssaude/" target="_blank"><img src="img/icon-instagram.svg" alt="ícone do Instagram da CMSS"></a>
+                    <a href="https://www.linkedin.com/company/cmss-sa%C3%BAde/" target="_blank"><img src="img/icon-linkedin.svg" alt="ícone do Linkedin da CMSS"></a>
+                    <a href="https://www.youtube.com/@coordenacaodemedicosnoserv1967" target="_blank"><img src="img/icon-youtube.svg" alt="ícone do Youtube da CMSS"></a>
+                </div>
+            </div>
+            <div class="copyright">
+
+                <img src="img/icon-copyright.svg" alt="ícone de copyright">
+                <p>Copyright 2024 - by <a class="nome-criadores" href="https://www.linkedin.com/in/leonardo-saes-97b21620a/" target="_blank
+                    ">Leonardo Saes</a> e <a class="nome-criadores" href="https://www.linkedin.com/in/matheus-rocha-martins-7a506a25a/" target="_blank">Matheus Rocha</a></p>
+            </div>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+    <script defer src="js/script.js"></script>
+
+</body>
+</html>
