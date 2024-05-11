@@ -13,8 +13,6 @@
     />
     <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/pagina-inicial.css">
-    
-    
 </head>
 <body>
     
@@ -228,17 +226,17 @@
                 </div>
                 <p>Não deixe passar esta oportunidade única de fazer networking incrível e estar na presença de renomados líderes do setor de saúde.</p>
                 <div class="form-inscricao">
-                    <form action="cadastro-participantes.php" method="post">
-                        <label for="nome">Nome:</label>
-                        <input type="text" name="nome" id="nome" required>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="numero">Número: </label>
-                        <input type="number" required name="numero" id="numero"  placeholder="(11) 99999-9999">
-                        <label for="cpf">CPF:</label>
-                        <input type="number" required name="cpf" id="cpf">
-                        <label for="cargo">Cargo:</label>
-                        <input type="text" name="cargo" id="cargo" required>
+                    <form id="form-participantes">
+                        <label for="nome-participantes">Nome:</label>
+                        <input type="text" name="nome-participantes" id="nome-participantes" required>
+                        <label for="email-participantes">Email:</label>
+                        <input type="email" name="email-participantes" id="email-participantes" required>
+                        <label for="numero-participantes">Número: </label>
+                        <input type="number" required name="numero-participantes" id="numero-participantes"  placeholder="(11) 99999-9999">
+                        <label for="cpf-participantes">CPF:</label>
+                        <input type="number" required name="cpf-participantes" id="cpf-participantes">
+                        <label for="cargo-participantes">Cargo:</label>
+                        <input type="text" name="cargo-participantes" id="cargo-participantes" required>
                         <button>Enviar</button>
                     </form>
                 </div>
@@ -258,7 +256,7 @@
         <div class="container-seja-patrocinador">
             <p>Esta é uma oportunidade imperdível para sua empresa se tornar patrocinadora do evento e apresentar seus produtos ou serviços para mais de 200 líderes na área hospitalar. O evento é um encontro fechado e exclusivo com 200 participantes, incluindo chefes de equipes médicas e diretores hospitalares. Faremos uma transmissão ao vivo do evento no YouTube, com a participação da Revista Executivos da Saúde, proporcionando acesso ao banco de dados da revista e dos participantes do evento.</p>
             <div class="form-seja-patrocinador">
-                <form action="cadastro-patrocinadores.php" method="post">
+                <form id="form-patrocinador">
                     <label for="nome-patrocinador">Nome:</label>
                     <input type="text" name="nome-patrocinador" id="nome-patrocinador" required>
                     <label for="email-patrocinador">Email:</label>
@@ -311,6 +309,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
     <script defer src="js/script.js"></script>
-
+    <script defer src="js/form.js"></script>
 </body>
 </html>
