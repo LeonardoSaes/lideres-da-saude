@@ -26,7 +26,7 @@ form_participantes.addEventListener('submit', function (event) {
             console.log(response);
         })
         .catch(error => {
-            alert('erro')
+            console.log(error.message);
         });
 });
 
@@ -56,10 +56,10 @@ form_patrocinador.addEventListener('submit', function (event) {
 
     fetch("http://localhost:3000/patrocinadores/register", options)
         .then(function (response) {
-            console.log(response);
+            
         })
         .catch(error => {
-            alert("ESTAMOS COM PROBLEMAS INTERNOS, TENTE NOVAMENTE MAIS TARDE")
+            console.log(error.message);
         });
 });
 
