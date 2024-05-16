@@ -51,3 +51,9 @@ var swiper2 = new Swiper(".mySwiper", {
   },
 });
 
+const exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+const openModalButton = document.getElementById('openModalButton')
+
+openModalButton.addEventListener('click', () => {
+    exampleModal.show()
+})
