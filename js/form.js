@@ -19,14 +19,19 @@ form_participantes.addEventListener('submit', function (event) {
         body: JSON.stringify(json)
     };
 
-    console.log(json)
-
     fetch("http://localhost:3000/participantes/register", options)
-        .then(function (response) {
-            console.log(response);
+        .then(async function (response) {
+            console.log(response)
+            if (response.status != 201) {
+                throw await response.json();
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
         })
         .catch(error => {
-            alert('erro')
+            console.log(error)
         });
 });
 
@@ -52,14 +57,19 @@ form_patrocinador.addEventListener('submit', function (event) {
         body: JSON.stringify(json)
     };
 
-    console.log(json)
-
     fetch("http://localhost:3000/patrocinadores/register", options)
-        .then(function (response) {
-            console.log(response);
+        .then(async function (response) {
+            console.log(response)
+            if (response.status != 201) {
+                throw await response.json();
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
         })
         .catch(error => {
-            alert("ESTAMOS COM PROBLEMAS INTERNOS, TENTE NOVAMENTE MAIS TARDE")
+            console.log(error)
         });
 });
 
