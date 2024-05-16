@@ -32,7 +32,6 @@ html{
     display: flex;
     max-width: 1500px;
     background-color: var(--color-1);
-    height: 80px;
     align-items: center;
     margin: 0 auto;
 }
@@ -212,7 +211,6 @@ a{
     margin-top: 100px;
     margin-bottom: 3px;
     color: var(--color-4);
-
 }
 
 /* SEÇÃO PALESTRANTES */
@@ -270,6 +268,14 @@ a{
     height: 100%;
     object-fit: cover;
 }
+span .carousel-control-next-icon{
+    color: var(--color-3);
+}
+
+
+
+
+
 
 /* SEÇÃO REVISTA */
 .revista{
@@ -607,7 +613,21 @@ input{
     color: var(--color-1);
 }
 
+@media screen and (max-width: 1327px){
+    /*SEÇÃO REVISTA*/
+    .section-right-revista{
+        display: none;
+    }
+    .section-left-revista{
+        width: 100%;
+    }
+}
 
+@media screen and (max-width: 992px){
+    nav .nav{
+        padding: 0;
+    }
+}
 
 @media screen and (max-width: 950px){
     
@@ -834,5 +854,11 @@ input{
     .titulo-assista .traco{
         margin-bottom: 50px;
         width: 230px;
+    }
+}
+
+@media screen and(max-width: 400px){
+    .copyright .nome-criadores{
+        font-size: 8px;
     }
 }
