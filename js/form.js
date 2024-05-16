@@ -1,3 +1,10 @@
+const sucessModal = new bootstrap.Modal(document.getElementById('success-modal'))
+const failedModal = new bootstrap.Modal(document.getElementById('failed-modal'))
+const modalErrorElement = document.getElementById('modal-body-error')
+const btnCloseModal = document.getElementById('btn-close-modal')
+
+sucessModal.show()
+
 let form_participantes = document.getElementById('form-participantes');
 
 form_participantes.addEventListener('submit', function (event) {
@@ -21,17 +28,27 @@ form_participantes.addEventListener('submit', function (event) {
 
     fetch("http://localhost:3000/participantes/register", options)
         .then(async function (response) {
-            console.log(response)
             if (response.status != 201) {
                 throw await response.json();
             }
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+            form_participantes.reset();
+            sucessModal.show()
         })
         .catch(error => {
-            console.log(error)
+            for (const key in error) {
+                if (error.hasOwnProperty(key)) {
+                    if (error[key] != "") {
+                        let p = document.createElement('p');
+                        p.textContent = error[key];
+                        p.setAttribute('class', 'text-dark');
+                        modalErrorElement.appendChild(p);
+                    }
+                }
+            }
+            failedModal.show()
         });
 });
 
@@ -59,17 +76,33 @@ form_patrocinador.addEventListener('submit', function (event) {
 
     fetch("http://localhost:3000/patrocinadores/register", options)
         .then(async function (response) {
-            console.log(response)
             if (response.status != 201) {
                 throw await response.json();
             }
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+            form_patrocinador.reset();
+            sucessModal.show()
         })
         .catch(error => {
-            console.log(error)
+            for (const key in error) {
+                if (error.hasOwnProperty(key)) {
+                    if (error[key] != "") {
+                        let p = document.createElement('p');
+                        p.textContent = error[key];
+                        p.setAttribute('class', 'text-dark');
+                        modalErrorElement.appendChild(p);
+                    }
+                }
+            }
+            failedModal.show()
         });
 });
 
+
+btnCloseModal.addEventListener('click', () => {
+    while (modalErrorElement.firstChild) {
+        modalErrorElement.removeChild(modalErrorElement.firstChild);
+    }
+});
