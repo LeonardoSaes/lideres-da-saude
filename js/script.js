@@ -51,3 +51,21 @@ var swiper2 = new Swiper(".mySwiper", {
   },
 });
 
+new Glide(".images",{
+  type:'carousel',
+  perView: 4,
+  focusAt: 'center',
+  gap: 40,
+  breakpoints: {
+    1200:{
+      perView: 3
+    },
+    800:{
+      perView: 2
+    },
+    500:{
+      perView: 1
+  }
+}
+
+}).mount();
