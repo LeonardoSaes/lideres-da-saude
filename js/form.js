@@ -2,13 +2,13 @@ const sucessModal = new bootstrap.Modal(document.getElementById('success-modal')
 const failedModal = new bootstrap.Modal(document.getElementById('failed-modal'))
 const modalErrorElement = document.getElementById('modal-body-error')
 const btnCloseModal = document.getElementById('btn-close-modal')
-
-sucessModal.show()
+const loadingModal = document.getElementById('loading-modal')
 
 let form_participantes = document.getElementById('form-participantes');
 
 form_participantes.addEventListener('submit', function (event) {
     event.preventDefault();
+    loadingModal.classList.add("enable");
 
     let json = {
         name: form_participantes['nome-participantes'].value,
@@ -28,6 +28,9 @@ form_participantes.addEventListener('submit', function (event) {
 
     fetch("http://localhost:3000/participantes/register", options)
         .then(async function (response) {
+            
+            loadingModal.classList.remove("enable");
+
             if (response.status != 201) {
                 throw await response.json();
             }
@@ -57,6 +60,7 @@ let form_patrocinador = document.getElementById('form-patrocinador');
 
 form_patrocinador.addEventListener('submit', function (event) {
     event.preventDefault();
+    loadingModal.classList.add("enable");
 
     let json = {
         name: form_patrocinador['nome-patrocinador'].value,
@@ -76,6 +80,9 @@ form_patrocinador.addEventListener('submit', function (event) {
 
     fetch("http://localhost:3000/patrocinadores/register", options)
         .then(async function (response) {
+
+            loadingModal.classList.remove("enable");
+
             if (response.status != 201) {
                 throw await response.json();
             }
