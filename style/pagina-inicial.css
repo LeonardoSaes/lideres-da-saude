@@ -141,6 +141,7 @@ a{
 }
 .loc-imersao{
     display: flex;   
+    
 }
 .loc-imersao a{
     color: var(--color-3);
@@ -771,9 +772,9 @@ input{
     .form-seja-patrocinador{
         width: 100%;
     }
-    p{
+    /* p{
         font-size: 14px;
-    }
+    } */
 }
 
 @media screen and (max-width:500px){

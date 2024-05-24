@@ -24,33 +24,6 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-
-
-var swiper2 = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  loop:true,
-  breakpoints: {
-    "@0.00": {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    "@0.75": {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    "@1.00": {
-      slidesPerView: 3,
-      spaceBetween: 40,
-     
-    },
-    "@1.50": {
-      slidesPerView: 4,
-      spaceBetween: 50,
-    },
-  },
-});
-
 new Glide(".images",{
   type:'carousel',
   perView: 4,
@@ -67,5 +40,10 @@ new Glide(".images",{
       perView: 1
   }
 }
-
 }).mount();
+
+$('#numero-participantes').mask('(00) 00000-0000');
+$('#numero-patrocinador').mask('(00) 00000-0000');
+
+$('#cpf-participantes').mask('000.000.000-00', {reverse: true});
+$('#cpf-patrocinador').mask('000.000.000-00', {reverse: true});

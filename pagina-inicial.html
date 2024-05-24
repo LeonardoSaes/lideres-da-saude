@@ -305,15 +305,19 @@
                     <form id="form-participantes">
                         <label for="nome-participantes">Nome:</label>
                         <input type="text" name="nome-participantes" id="nome-participantes" required>
+                        
                         <label for="email-participantes">Email:</label>
-                        <input type="email" name="email-participantes" id="email-participantes" required>
+                        <input type="email" name="email-participantes" id="email-participantes" required placeholder="email@exemplo.com">
+                        
                         <label for="numero-participantes">Número: </label>
-                        <input type="number" required name="numero-participantes" id="numero-participantes"
-                            placeholder="(11) 99999-9999">
+                        <input type="text" required name="numero-participantes" id="numero-participantes" placeholder="(11) 99999-9999">
+                       
                         <label for="cpf-participantes">CPF:</label>
-                        <input type="number" required name="cpf-participantes" id="cpf-participantes">
+                        <input type="text" required name="cpf-participantes" id="cpf-participantes" placeholder="123.456.789-00">
+                        
                         <label for="cargo-participantes">Cargo:</label>
                         <input type="text" name="cargo-participantes" id="cargo-participantes" required>
+                        
                         <button>Enviar</button>
                     </form>
                 </div>
@@ -340,15 +344,19 @@
                 <form id="form-patrocinador">
                     <label for="nome-patrocinador">Nome:</label>
                     <input type="text" name="nome-patrocinador" id="nome-patrocinador" required>
+                    
                     <label for="email-patrocinador">Email:</label>
-                    <input type="email" name="email-patrocinador" id="email-patrocinador" required>
+                    <input type="email" name="email-patrocinador" id="email-patrocinador" required placeholder="email@exemplo.com">
+                    
                     <label for="numero-patrocinador">Número: </label>
-                    <input type="number" required name="numero-patrocinador" id="numero-patrocinador"
-                        placeholder="(11) 99999-9999">
+                    <input type="text" required name="numero-patrocinador" id="numero-patrocinador" placeholder="(11)99999-9999">
+                    
                     <label for="cpf-patrocinador">CPF:</label>
-                    <input type="number" required name="cpf-patrocinador" id="cpf-patrocinador">
+                    <input type="text" required name="cpf-patrocinador" id="cpf-patrocinador" placeholder="123.456.789-00">
+                    
                     <label for="cargo-patrocinador">Cargo:</label>
                     <input type="text" name="cargo-patrocinador" id="cargo-patrocinador" required>
+                    
                     <button>Enviar</button>
                 </form>
             </div>
@@ -408,6 +416,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/glide.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="js/script.js"></script>
     <script defer src="js/form.js"></script>
 
