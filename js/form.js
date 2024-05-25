@@ -18,6 +18,8 @@ form_participantes.addEventListener('submit', function (event) {
         role: form_participantes['cargo-participantes'].value,
     }
 
+    console.log(json);
+    
     let options = {
         method: "POST",
         headers: {
