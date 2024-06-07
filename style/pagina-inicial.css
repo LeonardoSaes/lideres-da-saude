@@ -244,8 +244,28 @@ a{
     color: var(--color-4);
 }
 .glide__slide img{
+    position: relative;
+    z-index: -1;
     width: 100%;
+
 }
+.container-img-carossel{
+    position: relative;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #000  100%);
+}
+.img-carossel-legenda{
+    visibility: hidden;
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.container-img-carossel:hover .img-carossel-legenda{
+    visibility: visible;
+   
+}
+
 .glide__slide{
     filter: blur(6px);
     opacity: .7;
@@ -261,6 +281,20 @@ a{
     overflow: visible;
 }
 
+.img-carossel-legenda P{
+    color: var(--color-4);
+    font-family: 'Avenir', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+.img-carossel-legenda span{
+    color: var(--color-3);
+    font-family: 'Avenir', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
 
 
 
@@ -805,8 +839,18 @@ input{
     }
     .titulo-palestrantes .traco{
         width: 105px;
-        margin-bottom: 50px;
+        margin-bottom: 15px;
     }
+    .img-carossel-legenda{
+        visibility: visible;
+    }
+    .img-carossel-legenda p{
+        font-size: 17px;
+    }
+    .img-carossel-legenda span{
+        font-size: 12px;
+    }
+
 
     /* SEÇÃO REVISTA */
     .titulo-revista h2{
@@ -865,13 +909,18 @@ input{
         width: 100%;
     }
     .copyright img{
-        width: 11px;
-        height: 11px;
+        width: 8px;
+        height: 8px;
     }
 }
 
 @media screen and(max-width: 400px){
     .copyright .nome-criadores{
-        font-size: 8px;
+        margin-top: 5px;
+        font-size: 6px;
+    }
+    .copyright img{
+        width: 4px;
+        height: 4px;
     }
 }
