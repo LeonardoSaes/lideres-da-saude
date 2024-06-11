@@ -132,7 +132,7 @@ a{
 }
 
 .titulo-imersao .traco{
-    width: 200px;
+    width: 250px;
     margin-top: 8px;
     margin-bottom: 140px;
 }
@@ -235,6 +235,12 @@ a{
     flex-direction: column;
     align-items: center;
 }
+.titulo-palestrantes .traco{
+    width: 250px;
+    height: 2px;
+}
+
+
 
 .titulo-palestrantes h2{
     font-family: 'Avenir', sans-serif;
@@ -269,7 +275,7 @@ a{
 
 .glide__slide{
     filter: blur(6px);
-    opacity: .7;
+    opacity: .9;
     transition: .3s linear;
 }
 .glide__slide.glide__slide--active{
@@ -298,8 +304,6 @@ a{
 }
 
 
-
-
 /* SEÇÃO REVISTA */
 .revista{
     display: flex;
@@ -314,7 +318,7 @@ a{
     font-family: 'Avenir', sans-serif;
     font-size: 25px;
     color: var(--color-4);
-    margin-top: 30px;
+    margin-top: 140px;
 }
 .titulo-revista .traco{
     width: 250px;
@@ -337,11 +341,10 @@ a{
 
 .section-right-revista{
     width: 50%;
-    padding: 30px;
    
 }
 .section-right-revista img{
-    max-width: 300px;
+    max-width: 90%;
 }
 .titulo-revista .traco{
     width: 230px;
@@ -394,7 +397,6 @@ a{
 .section-right-primeira-imersao{
     width: 50%;
     padding: 30px;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -831,7 +833,7 @@ input{
         margin-top: 20px;
     }
     .titulo-evento .traco{
-        width: 90px;
+        width: 75px;
     }
 
     /* SEÇÃO PALESTRANTES */
