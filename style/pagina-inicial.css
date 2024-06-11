@@ -452,7 +452,7 @@ a{
 }
 .texto-encima-forms{
     margin: 0 auto;
-    width: 65%;
+    width: 70%;
 }
 .container-inscricao{
     display: flex;
@@ -566,7 +566,7 @@ form button:hover{
     margin-top: 20px;
 }
 .titulo-assista .traco{
-    width: 300px;
+    width: 270px;
 }
 .container-assista{
     margin: 0 auto;
@@ -861,6 +861,9 @@ input{
         margin-bottom: 100px;
     }
     .cor-data-e-loc a {
+        font-size: 14px;
+    }
+    .botoes-imersao button{
         font-size: 14px;
     }
     
