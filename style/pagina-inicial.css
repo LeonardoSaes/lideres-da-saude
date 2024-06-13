@@ -265,7 +265,7 @@ a{
     position: absolute;
     left: 30px;
     bottom: 40px;
-    right: 20px;
+    right: 30px;
     transition: opacity 0.2s ease-in-out;
 }
 .img-carossel-legenda span{
@@ -284,7 +284,7 @@ a{
 }
 
 .glide__slides{
-    overflow: visible;
+    overflow: hidden;
 }
 
 .img-carossel-legenda P{
@@ -482,10 +482,23 @@ input{
     height: 25px;
     border-radius: 5px;
     border: none;
-    padding: 5px;
+    padding: 9px;
     margin-bottom: 7px;
 }
 input:focus{
+    outline: 2px solid var(--color-3);
+}
+textarea{
+    outline: none;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin: 7px 0px;
+    resize: none;
+}
+
+textarea:focus{
     outline: 2px solid var(--color-3);
 }
 
@@ -864,7 +877,7 @@ input{
         font-size: 14px;
     }
     .botoes-imersao button{
-        font-size: 14px;
+        font-size: 12px;
     }
     
     /* SEÇÃO EVENTO */
@@ -946,13 +959,22 @@ input{
     }
 }
 
+@media screen and (max-width: 448px){
+    .botoes-imersao{
+        justify-content: space-between;
+        
+    }
+    .botoes-imersao button{
+        padding: 9px;
+        margin: 0px;
+    }
+}
 @media screen and (max-width:420px) {
     .copyright{
         width: 100%;
     }
     .copyright img{
-        width: 8px;
-        height: 8px;
+        display: none;
     }
 }
 
@@ -960,9 +982,5 @@ input{
     .copyright .nome-criadores{
         margin-top: 5px;
         font-size: 6px;
-    }
-    .copyright img{
-        width: 4px;
-        height: 4px;
     }
 }
