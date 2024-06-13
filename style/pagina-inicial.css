@@ -371,7 +371,7 @@ a{
 }
 .titulo-primeira-imersao .traco{
     width: 300px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .container-primeira-imersao{
@@ -412,6 +412,32 @@ a{
 .images2{
     margin-top: 40px;
 }
+/* SEÇÃO INVESTIDOR ANJO*/
+.investidor-anjo{
+    display: flex;
+    max-width: 1500px;
+    background-color: var(--color-1);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.titulo-investidor-anjo h2{
+    text-align: center;
+    font-family: 'Avenir', sans-serif;
+    font-size: 24px;
+    color: var(--color-4);
+    margin-top: 20px;
+}
+.investidor-anjo p{
+    padding: 30px;
+}
+.titulo-investidor-anjo .traco{
+    margin-bottom: 20px;
+}
 
 
 /* SEÇÃO INSCRIÇÃO */
@@ -419,6 +445,7 @@ a{
     display: flex;
     max-width: 1500px;
     background-color: var(--color-1);
+    background-image: url("../img/fundo-transparente2-maior.png");
     margin: 0 auto;
     margin-top: 5px;
     flex-direction: column;
@@ -517,7 +544,6 @@ form button:hover{
     display: flex;
     max-width: 1500px;
     background-color: var(--color-1);
-    background-image: url("../img/fundo-transparente2-maior.png");
     background-position: center;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -550,6 +576,7 @@ form button:hover{
     display: flex;
     max-width: 1500px;
     background-color: var(--color-1);
+    background-image: url("../img/fundo-transparente2-maior.png");
     margin: 0 auto;
     margin-top: 5px;
     flex-direction: column;
@@ -577,7 +604,6 @@ footer{
     max-width: 1500px;
     height: 80px;
     background-color: var(--color-1);
-    background-image: url(../img/fundo-transparente2-maior.png);
     background-position: center;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -877,8 +903,8 @@ input{
         font-size: 20px;
     }
     .titulo-palestrantes .traco{
-        width: 105px;
-        margin-bottom: 15px;
+        width: 205px;
+        margin-bottom: 50px;
     }
     .img-carossel-legenda{
         visibility: visible;
@@ -896,7 +922,7 @@ input{
         font-size: 20px;
     }
     .titulo-revista .traco{
-        margin-bottom: 35px;
+        margin-bottom: 50px;
     }
 
     /* SEÇÃO PRIMEIRA IMERSÃO */
