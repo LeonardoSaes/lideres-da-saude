@@ -102,6 +102,7 @@ a{
     width: 24px;
     height: 24px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 /* SEÇÃO IMERSÃO */
@@ -371,7 +372,7 @@ a{
 }
 .titulo-primeira-imersao .traco{
     width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .container-primeira-imersao{
@@ -380,7 +381,7 @@ a{
 .traco-vertical{
     background-color: var(--color-3);
     width: 2px;
-    height: 700px;
+    height: 561px;
 }
 
 .section-left-primeira-imersao{
@@ -682,6 +683,9 @@ input{
     .section-left-revista h2{
         margin-top: 0px;
     }
+    .traco-vertical{
+        height: 590px;
+    }
 }
 
 @media screen and (max-width: 1240px){
@@ -701,6 +705,9 @@ input{
     .botoes-imersao button{
         margin: 0px;
     }
+    .traco-vertical{
+        height: 600px;
+    }
 
 }
 
@@ -708,6 +715,9 @@ input{
 @media screen and (max-width: 992px){
     nav .nav{
         padding: 0;
+    }
+    .traco-vertical{
+        height: 650px;
     }
 }
 
