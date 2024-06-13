@@ -284,7 +284,7 @@ a{
 }
 
 .glide__slides{
-    overflow: hidden;
+    overflow: visible;
 }
 
 .img-carossel-legenda P{
@@ -496,6 +496,7 @@ textarea{
     padding: 5px;
     margin: 7px 0px;
     resize: none;
+    font-family: 'poppins', sans-serif;
 }
 
 textarea:focus{
