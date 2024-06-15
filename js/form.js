@@ -16,10 +16,11 @@ form_participantes.addEventListener('submit', function (event) {
         phone: form_participantes['numero-participantes'].value,
         cpf: form_participantes['cpf-participantes'].value,
         role: form_participantes['cargo-participantes'].value,
+        suggestion: form_participantes['textarea-participantes'].value,
     }
 
     console.log(json);
-    
+
     let options = {
         method: "POST",
         headers: {
@@ -30,7 +31,7 @@ form_participantes.addEventListener('submit', function (event) {
 
     fetch("http://localhost:3000/participantes/register", options)
         .then(async function (response) {
-            
+
             loadingModal.classList.remove("enable");
 
             if (response.status != 201) {
@@ -70,6 +71,7 @@ form_patrocinador.addEventListener('submit', function (event) {
         phone: form_patrocinador['numero-patrocinador'].value,
         cpf: form_patrocinador['cpf-patrocinador'].value,
         role: form_patrocinador['cargo-patrocinador'].value,
+        suggestion: form_patrocinador['textarea-patrocinadores'].value,
     }
 
     let options = {
