@@ -138,6 +138,7 @@ a{
 }
 .data-imersao u{
     color: var(--color-3);
+    padding: 10px;
 }
 .loc-imersao{
     display: flex;   
@@ -489,7 +490,7 @@ label{
 }
 input{
     outline: none;
-    height: 25px;
+    height: 31px;
     border-radius: 5px;
     border: none;
     padding: 9px;
@@ -708,6 +709,9 @@ input{
     .traco-vertical{
         height: 600px;
     }
+    p, li, u, label{
+        font-size: 14px;
+    }
 
 }
 
@@ -872,6 +876,7 @@ input{
 }
 
 @media screen and (max-width: 700px){
+   
     .form-inscricao{
         width: 100%;
     }
