@@ -695,8 +695,19 @@ input{
 
 @media screen and (max-width: 1327px){
     /*SEÇÃO REVISTA*/
+    .container-revista{
+        display: flex;
+        flex-direction: column;
+    }
     .section-right-revista{
-        display: none;
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        width: 100%;    
+    }
+    .section-right-revista img{
+        width: 400px;
+        height: auto;
     }
     .section-left-revista{
         width: 100%;
@@ -832,7 +843,10 @@ input{
         width: 100%;
     }
     .section-right-revista{
-        display: none;
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        width: 100%;
     }
     .botoes-imersao {
         justify-content: center;
