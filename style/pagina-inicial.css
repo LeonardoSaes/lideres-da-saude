@@ -134,7 +134,7 @@ a{
 .titulo-imersao .traco{
     width: 250px;
     margin-top: 8px;
-    margin-bottom: 140px;
+    margin-bottom: 50px;
 }
 .data-imersao u{
     color: var(--color-3);
@@ -893,9 +893,6 @@ input{
     /* SEÇÃO IMERSÃO */
     .section-left-imersao .titulo-imersao h2{
         font-size: 20px;
-    }
-    .section-left-imersao .titulo-imersao .traco{
-        margin-bottom: 100px;
     }
     .cor-data-e-loc a {
         font-size: 14px;
