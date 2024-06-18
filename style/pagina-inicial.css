@@ -259,6 +259,11 @@ a{
     width: 100%;
 
 }
+.glide__slide iframe{
+    position: relative;
+    width: 100%;
+
+}
 .container-img-carossel{
     position: relative;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #000  100%);
@@ -596,6 +601,21 @@ form button:hover{
 .container-assista{
     margin: 0 auto;
     padding-bottom: 50px;
+}
+.glide__slide iframe {
+    position: relative;
+    width: 100%;
+}
+
+.container-iframe-carossel {
+    position: relative;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #000 100%);
+}
+
+.glide__slide {
+    filter: blur(6px);
+    opacity: 0.9;
+    transition: 0.3s linear;
 }
 
 

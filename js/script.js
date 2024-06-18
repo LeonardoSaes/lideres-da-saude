@@ -43,6 +43,25 @@ new Glide(".images2",{
 }).mount();
 
 
+new Glide(".images3",{
+  type:'carousel',
+  perView: 4,
+  focusAt: 'center',
+  gap: 40,
+  breakpoints: {
+    1200:{
+      perView: 3
+    },
+    800:{
+      perView: 2
+    },
+    500:{
+      perView: 1
+  }
+}
+}).mount();
+
+
 $('#numero-participantes').mask('(00) 00000-0000');
 $('#numero-patrocinador').mask('(00) 00000-0000');
 
