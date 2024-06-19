@@ -94,22 +94,21 @@ a{
     background-color: var(--color-1);
     width: 100%;
 }
-.menu-mobile .imagem-logo{
+/* .menu-mobile .imagem-logo{
     width: 100px;
     height: 100px;
-}
+} */
 .menu-logo-icone-abrir{
     width: 24px;
     height: 24px;
     margin-right: 20px;
     cursor: pointer;
 }
-.menu-mobile h2{
-    font-size: 20px;
-    font-family: 'poppins', sans-serif;
-    color: var(--color-3);
-    margin-right: 30px;
-    margin-top: 9px;
+.menu-mobile .menu-logo-meio{
+    display: flex;
+    width: 200px;
+    height: auto;
+    padding: 10px;
 }
 
 /* SEÇÃO IMERSÃO */
