@@ -868,6 +868,10 @@ input{
         display: flex;
         flex-direction: column;
     }
+    .titulo-primeira-imersao .traco{
+        width: 250px;
+        margin-bottom: 20px;
+    }
     .section-left-primeira-imersao{
         width: 100%;
     }
@@ -1001,7 +1005,7 @@ input{
         font-size: 20px;
     }
     .titulo-seja-patrocinador .traco{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .container-seja-patrocinador p{
         margin-bottom: 30px;
