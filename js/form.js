@@ -4,113 +4,96 @@ const modalErrorElement = document.getElementById('modal-body-error')
 const btnCloseModal = document.getElementById('btn-close-modal')
 const loadingModal = document.getElementById('loading-modal')
 
-let form_participantes = document.getElementById('form-participantes');
+$("#form-participantes").on("submit", function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
 
-form_participantes.addEventListener('submit', function (event) {
-    event.preventDefault();
-    loadingModal.classList.add("enable");
+    var formData = new FormData();
 
-    let json = {
-        name: form_participantes['nome-participantes'].value,
-        email: form_participantes['email-participantes'].value,
-        phone: form_participantes['numero-participantes'].value,
-        cpf: form_participantes['cpf-participantes'].value,
-        role: form_participantes['cargo-participantes'].value,
-        suggestion: form_participantes['textarea-participantes'].value,
-    }
+    let form = document.getElementById('form-participantes');
 
-    console.log(json);
+    formData.append('name', form['nome-participantes'].value);
+    formData.append('email', form['email-participantes'].value);
+    formData.append('cpf', form['numero-participantes'].value);
+    formData.append('phone', form['cpf-participantes'].value);
+    formData.append('role', form['cargo-participantes'].value);
+    formData.append('suggestion', form['textarea-participantes'].value);
 
-    let options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(json)
-    };
-
-    fetch("http://localhost:3000/participantes/register", options)
-        .then(async function (response) {
-
-            loadingModal.classList.remove("enable");
-
-            if (response.status != 201) {
-                throw await response.json();
-            }
-            return response.json();
-        })
-        .then(function (data) {
-            form_participantes.reset();
-            sucessModal.show()
-        })
-        .catch(error => {
-            for (const key in error) {
-                if (error.hasOwnProperty(key)) {
-                    if (error[key] != "") {
+    fetch('php/Ajax/AjaxParticipantes.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+    
+        if (data.status === "success") {
+            form.reset();
+            sucessModal.show(); // Mostra o modal de sucesso
+        } else {  
+            // Itera sobre os erros recebidos e os adiciona ao modal de erro
+            for (const key in data.erros) {
+                if (data.erros.hasOwnProperty(key)) {
+                    if (data.erros[key] !== "") {
                         let p = document.createElement('p');
-                        p.textContent = error[key];
+                        p.textContent = data.erros[key];
                         p.setAttribute('class', 'text-dark');
                         modalErrorElement.appendChild(p);
                     }
                 }
             }
-            failedModal.show()
-        });
-});
+    
+            failedModal.show(); // Mostra o modal de falha
+        }
+    })
+    .catch(error => {
+        console.error('Erro na requisição AJAX:', error);
+    });
+})
 
+$("#form-patrocinador").on("submit", function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
 
-let form_patrocinador = document.getElementById('form-patrocinador');
+    var formData = new FormData();
 
-form_patrocinador.addEventListener('submit', function (event) {
-    event.preventDefault();
-    loadingModal.classList.add("enable");
+    let form = document.getElementById('form-patrocinador');
 
-    let json = {
-        name: form_patrocinador['nome-patrocinador'].value,
-        email: form_patrocinador['email-patrocinador'].value,
-        phone: form_patrocinador['numero-patrocinador'].value,
-        cpf: form_patrocinador['cpf-patrocinador'].value,
-        role: form_patrocinador['cargo-patrocinador'].value,
-        suggestion: form_patrocinador['textarea-patrocinadores'].value,
-    }
+    formData.append('name', form['nome-patrocinador'].value);
+    formData.append('email', form['email-patrocinador'].value);
+    formData.append('cpf', form['numero-patrocinador'].value);
+    formData.append('phone', form['cpf-patrocinador'].value);
+    formData.append('role', form['cargo-patrocinador'].value);
+    formData.append('suggestion', form['textarea-patrocinadores'].value);
 
-    let options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(json)
-    };
-
-    fetch("http://localhost:3000/patrocinadores/register", options)
-        .then(async function (response) {
-
-            loadingModal.classList.remove("enable");
-
-            if (response.status != 201) {
-                throw await response.json();
-            }
-            return response.json();
-        })
-        .then(function (data) {
-            form_patrocinador.reset();
-            sucessModal.show()
-        })
-        .catch(error => {
-            for (const key in error) {
-                if (error.hasOwnProperty(key)) {
-                    if (error[key] != "") {
+    fetch('php/Ajax/AjaxPatrocinadores.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+    
+        if (data.status === "success") {
+            form.reset();
+            sucessModal.show(); // Mostra o modal de sucesso
+        } else {
+    
+            // Itera sobre os erros recebidos e os adiciona ao modal de erro
+            for (const key in data.erros) {
+                if (data.erros.hasOwnProperty(key)) {
+                    if (data.erros[key] !== "") {
                         let p = document.createElement('p');
-                        p.textContent = error[key];
+                        p.textContent = data.erros[key];
                         p.setAttribute('class', 'text-dark');
                         modalErrorElement.appendChild(p);
                     }
                 }
             }
-            failedModal.show()
-        });
-});
-
+    
+            failedModal.show(); // Mostra o modal de falha
+        }
+    })
+    .catch(error => {
+        console.error('Erro na requisição AJAX:', error);
+    });
+})
 
 btnCloseModal.addEventListener('click', () => {
     while (modalErrorElement.firstChild) {

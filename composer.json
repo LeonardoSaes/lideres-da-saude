@@ -1,0 +1,19 @@
+{
+    "name": "lima/lideres-da-saude",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "JoaoLimaV",
+            "email": "joaolima675@outlook.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "illuminate/database": "^11.11",
+        "illuminate/events": "^11.11"
+    }
+}
