@@ -422,9 +422,14 @@ a{
 }
 .section-right-primeira-imersao p{
     margin-bottom: 30px;
+    margin-left: 7px;
 }
 .images2{
     margin-top: 40px;
+}
+.section-right-primeira-imersao .resultados{
+    display: flex;
+    align-items: flex-start;
 }
 /* SEÇÃO INVESTIDOR ANJO*/
 .investidor-anjo{
