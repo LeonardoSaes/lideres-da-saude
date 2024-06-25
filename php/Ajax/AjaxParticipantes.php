@@ -1,11 +1,16 @@
 <?php
 
+require_once __DIR__ . '../../Middleware/middleware.php';
+checkOrigin();
+
 header('Content-Type: application/json');
 
 require_once __DIR__ . '../../Controllers/ParticipantesController.php';
+require_once __DIR__ . '../../Controllers/EmailController.php';
 require_once __DIR__ . '../../Validators/ParticipantesValidator.php';
 
 use Controllers\ParticipantesController;
+use Controllers\EmailController;
 
 // Pega os valores enviados na requisição
 
@@ -43,6 +48,10 @@ foreach ($erros as $campo => $mensagem) {
 $resultInsert = ParticipantesController::create($user);
 
 if( $resultInsert ) { 
+
+    $mail = new EmailController();
+    $mail->sendParticipantEmail($user);
+    
     $json = [
         'status' => 'success',
         'erros'  => $erros

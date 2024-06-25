@@ -1,11 +1,16 @@
 <?php
 
+require_once __DIR__ . '../../Middleware/middleware.php';
+checkOrigin();
+
 header('Content-Type: application/json');
 
 require_once __DIR__ . '../../Controllers/PatrocinadoresController.php';
+require_once __DIR__ . '../../Controllers/EmailController.php';
 require_once __DIR__ . '../../Validators/PatrocinadoresValidator.php';
 
 use Controllers\PatrocinadoresController;
+use Controllers\EmailController;
 
 // Pega os valores enviados na requisição
 
@@ -43,6 +48,10 @@ foreach ($erros as $campo => $mensagem) {
 $resultInsert = PatrocinadoresController::create($user);
 
 if( $resultInsert ) { 
+
+    $mail = new EmailController();
+    $mail->sendSponsorEmail($user);
+
     $json = [
         'status' => 'success',
         'erros'  => $erros

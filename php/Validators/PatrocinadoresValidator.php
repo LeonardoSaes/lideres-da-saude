@@ -41,7 +41,7 @@ function validate($user) {
     // Validação do telefone
     if (empty($user['phone'])) {
         $errors['phone'] = "Preenchimento obrigatório.";
-    } elseif (strlen($user['phone']) != 11) {
+    } elseif (strlen($user['phone']) != 11 || preg_match('/(\d)\1{10}/', $user['phone']) == 1) {
         $errors['phone'] = "Número de telefone inválido.";
     } else {
         try {
@@ -79,6 +79,8 @@ function validate($user) {
 
 // Função para validar CPF
 function validCpf($cpf) {
+    // Extrai somente os números
+    $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
      
     // Verifica se foi informado todos os digitos corretamente
     if (strlen($cpf) != 11) {
@@ -100,7 +102,6 @@ function validCpf($cpf) {
             return false;
         }
     }
-    
     return true;
 }
 
