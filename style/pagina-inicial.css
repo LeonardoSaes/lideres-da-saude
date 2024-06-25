@@ -142,9 +142,12 @@ a{
     margin-top: 8px;
     margin-bottom: 50px;
 }
-.data-imersao u{
+.data-imersao a{
     color: var(--color-3);
     padding: 10px;
+}
+.data-imersao a:hover{
+    text-decoration: underline;
 }
 .loc-imersao{
     display: flex;   
@@ -887,7 +890,7 @@ input{
         width: 100%;
     }
     .section-right-primeira-imersao .resultados p{
-        font-size: 16px;
+        font-size: 18px;
     }
     .traco-vertical{
         display: none;
