@@ -1,11 +1,13 @@
 const sucessModal = new bootstrap.Modal(document.getElementById('success-modal'))
 const failedModal = new bootstrap.Modal(document.getElementById('failed-modal'))
+
 const modalErrorElement = document.getElementById('modal-body-error')
 const btnCloseModal = document.getElementById('btn-close-modal')
 const loadingModal = document.getElementById('loading-modal')
 
 $("#form-participantes").on("submit", function (event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault();
+    loadingModal.classList.add("enable");
 
     var formData = new FormData();
 
@@ -13,8 +15,8 @@ $("#form-participantes").on("submit", function (event) {
 
     formData.append('name', form['nome-participantes'].value);
     formData.append('email', form['email-participantes'].value);
-    formData.append('cpf', form['numero-participantes'].value);
-    formData.append('phone', form['cpf-participantes'].value);
+    formData.append('cpf', form['cpf-participantes'].value);
+    formData.append('phone', form['numero-participantes'].value);
     formData.append('role', form['cargo-participantes'].value);
     formData.append('suggestion', form['textarea-participantes'].value);
 
@@ -22,7 +24,10 @@ $("#form-participantes").on("submit", function (event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then( async (response) => { 
+        loadingModal.classList.remove("enable");
+        return await response.json();
+    })
     .then(data => {
     
         if (data.status === "success") {
@@ -47,10 +52,12 @@ $("#form-participantes").on("submit", function (event) {
     .catch(error => {
         console.error('Erro na requisição AJAX:', error);
     });
+
 })
 
 $("#form-patrocinador").on("submit", function (event) {
     event.preventDefault(); // Impede o envio padrão do formulário
+    loadingModal.classList.add("enable");
 
     var formData = new FormData();
 
@@ -58,8 +65,8 @@ $("#form-patrocinador").on("submit", function (event) {
 
     formData.append('name', form['nome-patrocinador'].value);
     formData.append('email', form['email-patrocinador'].value);
-    formData.append('cpf', form['numero-patrocinador'].value);
-    formData.append('phone', form['cpf-patrocinador'].value);
+    formData.append('cpf', form['cpf-patrocinador'].value);
+    formData.append('phone', form['numero-patrocinador'].value);
     formData.append('role', form['cargo-patrocinador'].value);
     formData.append('suggestion', form['textarea-patrocinadores'].value);
 
@@ -67,7 +74,10 @@ $("#form-patrocinador").on("submit", function (event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then( async (response) => { 
+        loadingModal.classList.remove("enable");
+        return await response.json();
+    })
     .then(data => {
     
         if (data.status === "success") {
